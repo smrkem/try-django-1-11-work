@@ -18,3 +18,12 @@ DATABASES = {
 
 and then run with:  
 `docker-compose up`
+
+
+***  
+- Install and setup pytest. Create test_settings.py.  
+- Create settings module  
+
+***
+- `python manage.py migrate`  
+- `python manage.py createsuperuser`
