@@ -2,6 +2,7 @@
 <html lang=en>
 <head>
   <title>{% block head_title %}Try Django Work{% endblock %}</title>
+  {% include 'snippets/css.html' %}
 </head>
 <body>
   <header>Try Django</header>
@@ -9,5 +10,6 @@
     {% block content %}{% endblock content %}
   </div>
 
+  {% include 'snippets/js.html' %}
 </body>
 </html>
