@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from django.views import View
 
-# Create your views here.
-def home(request):
-    return render(request, 'home.html', {"myvar": "Slippery Pete"})
+from .models import RestaurantLocation
 
-class ContactView(View):
-    def get(self, request, *args, **kwargs):
-        return render(request, 'contact.html', {})
+def restaurant_listview(request):
+    template_name = 'restaurants/restaurants_list.html'
+    queryset = RestaurantLocation.objects.all()
+    print(queryset)
+    context = {
+        "object_list": queryset
+    }
+    return render(request, template_name, context)
