@@ -1,8 +1,6 @@
-from django.http import HttpResponse
 from django.shortcuts import render
+
 
 # Create your views here.
 def home(request):
-    return HttpResponse('hello karl...')
-    # return render(request, 'template', {})
-    
+    return render(request, 'home.html', {"myvar": "Slippery Pete"})
